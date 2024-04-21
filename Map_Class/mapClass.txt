@@ -1,0 +1,51 @@
+numeric array -> mean whoes array acess by index no, that is call numeric array
+              or whose indexing is help of number is called numeric
+
+associative array -> the indexing bone by name wht ever you want
+                     and this associative array done help of map
+
+
+*****************************map*******************************
+  -> map are use to replicate (copy pase nakal krna) associative array
+  -> map contain shorted key value pair, in which
+     each key is unique and cannot be changed and\
+     it can be inserted or deleted but cannot be altered
+
+     key value pair  mean      ex-  want to stored student marks    so  index =student name = key, particular indeX VALUE = value
+
+
+               associative Array = map
+                 
+                         customer no.key         customer name= value
+                                100                   jitendra
+                                123                   vishal
+                                345                   vikas
+                                171                   veena
+                                388                   arati
+Map Property
+
+  -> maps always arrange its keys in shorted order
+  -> in case the keys are  of string type, they are
+     sorted in  dictionary order
+
+How to create a map
+                    key,value
+                map<int,string> customer
+
+                customer[100] = "vihan";
+                customer[123] = "vikas";
+                customer[145] = "vishal";
+                customer[171] = "veena";
+                customer[200] = "arati";
+
+2 way to store data inside map-->>
+ 
+    map<int,string> customer { {100,"vihan"},{123,"vikas"},{245,"vishal"} };
+            
+*********SOME use full function for manp class ******
+    ->at() -> if you give it to index to at() function , it will return particular value
+    -> []
+    -> size() -> return how  many value inside map
+    -> empty() -> check map empty of not return 0 or 1
+    -> insert() -> insert data customer.insert{pair<int,string>{543,"mamta"}};
+    -> clear() -> remove all data

@@ -1,0 +1,27 @@
+List
+
+List class supports a bidirectional(two way),linear List.
+
+vector supports random access but a list can be accessed sequentially only
+
+List can be accessed front to back or back to front
+
+
+********Creating List object****
+ 
+      list<int> l1;
+      list<int> l2 {11,22,44,55};
+      list<string> l3 {"vishal","vikas","veen","arati"};
+
+      **********Useful Function of list class*****
+      sort()
+      size()    -> check total value in the list are like example of this list ans = 4;
+      push_back()
+      push_front()
+      pop_back()
+      reverse()
+      remove()  -> if you want remove a particular no, you can and if you want remove that no
+                  who not do not exist , so will not effect your list
+                  and if you want that number remove who no is repeated then after removing
+                  all repeated not removed;
+      clear()  -> clear function clear all the list;

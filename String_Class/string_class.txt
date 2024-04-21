@@ -1,0 +1,110 @@
+overview ->
+          in c programming we are playing with char array so how we store any string
+          char ch[20]="vishal";
+              ch="vikas";   // wrong //error
+                         strcpy(ch,"vikas"); //right
+          char v[34];
+          v=ch;  // wrong//error;
+          strcpy(v,ch);  //right way;
+
+          v>ch; // wrong;
+
+          int i = strcmp(v,ch); // if i ==0 then string are same
+          
+          char s3[45];
+          s3=v+ch;  // wrong;
+
+          strcmp(s3,strcat(ch,v));
+
+          over all you cannot do such a operation with array because array is not perimitive
+          data type ,mean basic operation apply only data type  , if you want to perform such type of operation we need to some string operation
+          function strcpy strlen etc.......
+
+          ****so c++ operators cannot be applied to them 
+
+          for that come to the picture ---->>>>string class in c++
+
+          ********************string class ****************
+-> The string class is a specialization of a more general template class called basic_string // basic_string is parent class and string class is a child class
+
+-> since defining a class in c++ is creating a new data type, string is derived data type
+
+-> this means operators can be overloaded for the class
+
+
+****string is safe than char array
+ -> careless programmer can overrun the end of an array that hold a null terminated string.
+
+   for example, using strcpy()
+
+   -> string class handles such issues
+
+***********string is in STL
+-> string is an another container class 
+-> to use string class, you have to include string header 
+
+      ->#include<string>  //#include<string> is different form #include<string.h> this is use for strcpy and 
+
+      ***********constructor*****************
+String class supports many constructor, some of them are
+
+         ->string()
+         ->string(const char *str)
+         ->string(const string &str)
+
+
+         many operator we can ues for string but we can not use for normal char array
+
+
+         operator we can use 
+
+           ->  = Assignment
+           ->  + concatenation
+           ->  += concatenation Assignment
+           ->  == Equality
+           ->  != inequality
+           ->  < less than
+           ->  <= less than Equal
+           ->  > greater than
+           ->  >= greater than of Equal
+           ->  []  subscripting
+
+           note -> ">>" operator is consider " " space as a delimeter that's why if you want to print  input = vishal kumar 
+                output -> vishal only / because space consider delimeter that why compiler goes terminate
+
+
+                   ********************mixed operation****************
+
+                   -> you can mix string object with another string object or c style string
+                               
+                               string s1 = "vishal";
+                               char str[] = "student";
+                              string s2 = s1+str; // we can also perform this operation too
+                                means the + operator have overloaded with many functionality
+                                s2 = s1 + "123";
+                                cout<<s2;
+
+
+                   -> c++ string can also be concatenated with character constant
+
+*****************Useful method *******************
+
+   -> assign();  -> it is similar to assign string to variable;
+   -> append(); -> it is similar to concatenate with present string;
+   ->insert(); -> if you want to insert any  string b/w present string, you can help of that index; insert(2,123) set second index
+   -> replace(); -> what does this function you want to replace any sentence just you give index and till which index you want to replace means lenght
+                    like ======   replace(index,till index,"changeable Sentence");
+                    index    0  1   2  3  4  5
+                            "v  i   s  h  a  l"
+
+                            i want to replace index 3 to 5 as u;    output = visu
+                            
+
+
+
+   -> erase();
+   -> find();
+   -> rfind();
+   -> compare();
+   -> c_str();
+   -> size();

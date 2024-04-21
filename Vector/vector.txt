@@ -1,0 +1,116 @@
+Vector is the most general purpose container
+it support a dynamic array
+
+
+what is Vector---Vectors are the same as dynamic arrays with the ability to resize
+ itself automatically when an element is inserted or deleted, with their storage being
+  handled automatically by the container,it is a template class 
+
+  means what ever user want to add that much user can store --means flexabal memory;
+  when make array/vector initially there have some capacity 
+  --let capacity 1  and you want to resize that time vector will grow
+  it size then how to grow double size of its current capacity means
+  if vector capacity 1 then after resize capacity will be 2 if 4 then 8
+  
+  note - by default capacity does 1 
+        if you declear during declaration the capacity will be how much you want
+   it it's the way how vector size grow, it totally different link list
+
+
+array vs Vector
+1.array size is fixed, no flexibility to grow or shrink during execution
+2. vector can provide memory flexibility
+
+code below will create a blank vector
+        vector <int>v1;
+
+Initialize during declaration
+       vector <string>v{"vishal","vikas"};n // this not mandantry it;a yoy coice
+    
+  
+  more vector declaration
+
+1. vector<int> v1;
+    -zero lenght vector
+2. vector<char> cv(5);
+      -create a 5 element char Vector
+3. vector <char> cv(4,'a');
+       -initializes 4 element char vector with 'a'      
+  
+  
+  ****you can perform reletion operetion as well as like ==,!=etc
+  we can use Subscript operetor [] is also defined for vector
+             cout<<vs[0]<<endl;
+      cout<<vs[1]<<endl;
+        cout<<vs[2]<<endl;
+        for(int i=0;i<=4;i++)
+          cout<<v3[i]<<endl;
+
+
+          ********Push back()******
+  push_back() is a member function, which can be used to add value to the vector at the end
+
+  ************pop_back()*******
+    -it removed the last element  
+    but don't reduced capacity only delete last element 
+
+         ******capacity()****
+         -> it return the capacity of the vector
+         -> This is the number of the element it can hold before it will need to allocate more memory
+       
+      *****************size******
+       -> it return the number of elements currently in the  vector
+       -> there is mythe to the capacity() and size() both are same 
+          but this is absolutely worng because size return how many member
+          inside vector but capacity return how much capacity for insert vector where 
+          to need more size to store or it is ok
+
+          ********clear()*****
+          -> it removes all element from the vector
+
+          **********at()*******
+          -> This method works same in case of vector as it works for array
+          ->it return the element at Ith index in the vector vector_name
+                cout<<v1.at(3);// return 3th index element;
+
+           **********front() and back()******
+           -> front() return the first element fo the Vector
+
+           -> back() return the last element of the vector
+  Some commonly used member functions are written below:
+
+Iterators***************
+
+  -> iterator as a pointer which is point any particular block
+
+   Introduction to Iterators
+Iterators are used to point at the memory addresses of STL containers. They are primarily used in sequences of numbers, characters etc. They reduce the complexity and execution time of the program.
+
+Operations of iterators :-
+
+1. begin() :- This function is used to return the beginning position of the container. not element
+               if you want that position element therefor you not to pointer --*(v1.begin())
+
+2. end() :- This function is used to return the after end position of the container.
+            this function return the last position means this is a last position of this block like that 
+
+            ***************we have more function for iterator please use geekforgeek for more help**************
+
+
+
+
+
+
+
+Iterators
+
+begin() – Returns an iterator pointing to the first element in the vector
+end() – Returns an iterator pointing to the theoretical element that follows the last element in the vector
+rbegin() – Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+cbegin() – Returns a constant iterator pointing to the first element in the vector.
+cend() – Returns a constant iterator pointing to the theoretical element that follows the last element in the vector.
+crbegin() – Returns a constant reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+
+// C++ program to illustrate t
